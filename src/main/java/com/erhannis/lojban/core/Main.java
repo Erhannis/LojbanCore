@@ -18,7 +18,7 @@ import java.nio.file.Path;
 public class Main {
   public static void main(String[] args) throws IOException {
     String text = new String(Files.readAllBytes(FileSystems.getDefault().getPath("alice.txt")));
-    String[] a = LojbanToIpa.lojbanToSentences(text);
+    String[] a = LojbanToIpa.lojbanToIpa(text);
     for (int i = 0; i < a.length; i++) {
       System.out.println(i + " - " + a[i]);
     }
