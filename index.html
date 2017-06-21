@@ -72,10 +72,13 @@
   }
   </style>
 
-  <script type="text/javascript" src="mespeak.js"></script>
+  <script type="text/javascript" src="mespeak.full.js"></script>
   <script type="text/javascript">
+    console.log("loading config");
     meSpeak.loadConfig("mespeak_config.json");
+    console.log("loading voice");
     meSpeak.loadVoice("en.json");
+    console.log("loaded 2");
   </script>
 </head>
 
@@ -261,10 +264,10 @@
 
     <div id="tool">
     <p style="text-align: center;"><em>Convert <abbr title="International Phonetic Alphabet">IPA</abbr> phonetic notation to speech</em></p>
-    <form onsubmit="process(); return false;">
-      <input id="ipa-input" onchange="clear_download_button(); return false;" type="text" value="/mʊmˈbaɪ/" />
-      <input id="submit" onclick="process(); return false;" type="button" value="pronounce" />
-      <input id="download-button" onclick="download(); return false;" type="button" disabled="disabled" value="download pronunciation" />
+    <form name="pronunciation_form" onsubmit="process(); return false;">
+      <input name="ipa-input" id="ipa-input" onchange="clear_download_button(); return false;" type="text" value="/mʊmˈbaɪ/" />
+      <input name="submit" id="submit" onclick="process(); return false;" type="button" value="pronounce" />
+      <input name="download-button" id="download-button" onclick="download(); return false;" type="button" disabled="disabled" value="download pronunciation" />
     </form>
     </div>
   
