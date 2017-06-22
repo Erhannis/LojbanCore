@@ -62,7 +62,7 @@ public class Dictionary {
           }
           break;
         case "meanings":
-          meanings.append(" " + line.trim());
+          meanings.append(" " + line.trim() + " .");
           break;
       }
     }
